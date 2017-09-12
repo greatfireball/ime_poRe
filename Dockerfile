@@ -19,3 +19,5 @@ WORKDIR /data
 
 # loading poRe on R startup
 ENV R_DEFAULT_PACKAGES=poRe
+
+CMD R
