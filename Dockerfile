@@ -16,3 +16,6 @@ RUN apt install wget && wget -O /tmp/poRe_0.24.tar.gz 'https://sourceforge.net/p
 VOLUME /data
 
 WORKDIR /data
+
+# loading poRe on R startup
+ENV R_DEFAULT_PACKAGES=poRe
