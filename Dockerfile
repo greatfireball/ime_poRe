@@ -8,3 +8,5 @@ RUN apt update && apt install --yes software-properties-common python-software-p
 RUN apt update && apt install --yes r-base r-base-dev
 
 RUN Rscript -e 'source("https://bioconductor.org/biocLite.R"); biocLite("rhdf5")'
+
+RUN Rscript  -e 'install.packages(c("shiny","svDialogs","data.table","bit64"), repos=c("https://cloud.r-project.org"))'
