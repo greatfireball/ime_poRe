@@ -10,3 +10,5 @@ RUN apt update && apt install --yes r-base r-base-dev
 RUN Rscript -e 'source("https://bioconductor.org/biocLite.R"); biocLite("rhdf5")'
 
 RUN Rscript  -e 'install.packages(c("shiny","svDialogs","data.table","bit64"), repos=c("https://cloud.r-project.org"))'
+
+RUN apt install wget && wget -O /tmp/poRe_0.24.tar.gz 'https://sourceforge.net/projects/rpore/files/0.24/poRe_0.24.tar.gz/download' && R CMD INSTALL /tmp/poRe_0.24.tar.gz && rm /tmp/poRe_0.24.tar.gz
