@@ -6,3 +6,5 @@ LABEL description="Dockerfile providing the poRe quality assessment and sequence
 RUN apt update && apt install --yes software-properties-common python-software-properties && add-apt-repository --yes ppa:marutter/rrutter
 
 RUN apt update && apt install --yes r-base r-base-dev
+
+RUN Rscript -e 'source("https://bioconductor.org/biocLite.R"); biocLite("rhdf5")'
